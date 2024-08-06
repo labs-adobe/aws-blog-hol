@@ -116,6 +116,7 @@ const decoratefooterCopyrightSection = (footer) => {
  */
 
 export default async function decorate(block) {
+  if(window.location.href.includes('/forms/question-submission-page') || window.location.href.includes('forms/question-submission-thankyou')) return;
   const cfg = readBlockConfig(block);
   block.textContent = '';
   block.classList.add('contained');

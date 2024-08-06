@@ -512,6 +512,7 @@ async function fetchGnav(url) {
 
 export default async function init(blockEl) {
   // OLD CODE: const url = getMetadata('gnav') || '/gnav';
+  if(window.location.href.includes('/forms/question-submission-page') ||  window.location.href.includes('forms/question-submission-thankyou')) return;
   const url = '/new-nav';
   const html = await fetchGnav(url);
 
