@@ -114,7 +114,10 @@ main .form-legal-wrapper p {
 main .form button {
   font-family: var(--body-font-family);
 }
-
+.form-wrapper{
+  width: 80%;
+  margin: 50px auto;
+}
 @media screen and (min-width: 900px) {
   main .form {
     padding: var(--spacing-ml);
