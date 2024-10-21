@@ -446,10 +446,10 @@ function decorateBreadcrumb(main) {
 
   const list = createTag('ul');
   const home = createTag('li', {}, '<a href="#" class="breadcrumb-link-underline-effect">Home</a>');
-  const docs = createTag('li', {}, '<a href="#" class="breadcrumb-link-underline-effect">Documentation</a>');
+  //const docs = createTag('li', {}, '<a href="#" class="breadcrumb-link-underline-effect">Documentation</a>');
 
   list.append(home);
-  list.append(docs);
+  //list.append(docs);
 
   const category = getMetadata('category');
   const title = getMetadata('og:title');
