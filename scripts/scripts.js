@@ -454,6 +454,7 @@ function decorateBreadcrumb(main) {
   const category = getMetadata('category');
   const title = getMetadata('og:title');
 
+  /*
   if (category) {
     const section = createTag(
       'li',
@@ -462,6 +463,7 @@ function decorateBreadcrumb(main) {
     );
     list.append(section);
   }
+  */
 
   if (!isDocumentationLanding) {
     const article = createTag('li', {}, `<a href="${window.location.pathname}">${title}</a>`);
