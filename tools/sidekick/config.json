@@ -19,7 +19,7 @@
       "id": "library",
       "title": "Library",
       "environments": ["edit"],
-      "url": "/tools/sidekick/library.html",
+      "url": "https://main--event--adobehols.aem.live/tools/sidekick/library.html",
       "includePaths": ["**.docx**"]
     },
     {
