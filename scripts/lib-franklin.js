@@ -420,7 +420,8 @@ export function decorateSections(main) {
     /* process section metadata */
     const sectionMeta = section.querySelector('div.section-metadata');
     if (sectionMeta) {
-      const meta = readBlockConfig(sectionMeta);
+      //const meta = readBlockConfig(sectionMeta);
+      const meta = { "style": "content" };
       Object.keys(meta).forEach((key) => {
         if (key === 'style') {
           const styles = meta.style
@@ -687,7 +688,8 @@ export function decorateTemplateAndTheme() {
       element.classList.add(toClassName(c.trim()));
     });
   };
-  const template = getMetadata('template');
+  // const template = getMetadata('template');
+  const template = "guides";
   if (template) addClasses(document.body, template);
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, theme);
@@ -881,7 +883,7 @@ class TemplatesRegistry {
       return;
     }
     const { id: templateId, config: templateConfig } = parsePluginParams(id, url);
-    templateConfig.condition = () => toClassName(getMetadata('template')) === templateId;
+    templateConfig.condition = () => toClassName('guides') === templateId;
     window.hlx.plugins.add(templateId, templateConfig);
   }
 
