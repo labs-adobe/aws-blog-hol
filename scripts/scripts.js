@@ -303,7 +303,8 @@ export function customDecorateTemplateAndTheme() {
       element.classList.add(toClassName(c.trim()));
     });
   };
-  const template = getMetadata('template');
+  // const template = getMetadata('template');
+  const template = "guides";
   if (template) addClasses(document.body, `${template.toLowerCase()}-template`);
   const theme = getMetadata('theme');
   if (theme) addClasses(document.body, `${theme.toLowerCase()}-theme`);
@@ -641,7 +642,8 @@ function setUpSoftNavigation() {
   window.addEventListener('popstate', async (e) => {
     const { href, pathname } = window.location;
     const link = document.body.querySelector(`.side-navigation a[href="${pathname}"]`);
-    if (link && getMetadata('template') === 'guides') {
+    const template = "guides";
+    if (link && template) {
       e.preventDefault();
       await navigate(href, link);
     }
@@ -649,7 +651,8 @@ function setUpSoftNavigation() {
 
   document.body.addEventListener('click', async (e) => {
     const link = e.target.closest('a');
-    if (link && getMetadata('template') === 'guides' && e.target.closest('.side-navigation')) {
+    const template = "guides";
+    if (link && template && e.target.closest('.side-navigation')) {
       const { href } = link;
       const hrefURL = new URL(href);
       if (hrefURL.origin === window.location.origin) {
