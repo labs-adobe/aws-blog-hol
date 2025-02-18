@@ -699,7 +699,9 @@ async function loadLazy(doc) {
     // breadcrumb setup
     // loadBreadcrumb(main);
     // sidebar + related style setup
-    setUpSideNav(main, main.querySelector('aside'));
+    if (!window.location.href.includes('about:srcdoc')) {
+      setUpSideNav(main, main.querySelector('aside'));
+    }
     decorateGuideTemplateCodeBlock();
   }
 

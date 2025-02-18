@@ -10,3 +10,10 @@
 .video video {
     width: 100%;
 }
+
+@media (min-width: 800px) {
+    .embed-container {
+        min-width: 800px;
+        margin: 0 auto;
+    }
+}
